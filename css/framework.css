@@ -3,6 +3,9 @@
 */
 
 body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin: 0;
 	padding: 40px;
 	background: #EFEFEF;
@@ -10,8 +13,18 @@ body {
 	font-size: 12px;
 }
 
+#container {
+	text-align: center;
+	margin-top: 10vw;
+	width: auto;
+	margin: auto;
+}
+
 #portfolio {
+	display: flex;
+	flex-direction: row;
 	margin: 0;
+
 }
 
 #portfolio .portfolio-item {
@@ -24,14 +37,29 @@ body {
 }
 
 .primary {
+	position: absolute;
 	float: left;
-	z-index: -200;
+	z-index: 200;
 }
 
 .secondary {
+	position: absolute;
 	float: left;
 	z-index: 0;
+	/*transition: .8s ease-in-out;*/
+
+	/*transform: rotateY(90deg);*/
+	opacity 1;
 }
+
+.primary:hover {
+	opacity: 0;
+	transform-style: preserve-3d;
+	transition: .8s ease-in-out;
+	transform: rotateY(90deg);
+
+}
+
 #portfolio .portfolio-item .primary,
 #portfolio .portfolio-item .secondary {
 	display: block;
@@ -52,4 +80,5 @@ body {
 
 #portfolio .portfolio-item .secondary h2 {
 	margin-top: 0px;
+
 }
