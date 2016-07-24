@@ -15,7 +15,7 @@ body {
 }
 
 #portfolio .portfolio-item {
-	display: block;
+	display: flex;
 	float: left;
 	width: 200px;
 	height: 200px;
@@ -23,6 +23,15 @@ body {
 	margin: 10px;
 }
 
+.primary {
+	float: left;
+	z-index: -200;
+}
+
+.secondary {
+	float: left;
+	z-index: 0;
+}
 #portfolio .portfolio-item .primary,
 #portfolio .portfolio-item .secondary {
 	display: block;
